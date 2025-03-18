@@ -1,0 +1,18 @@
+@media screen and (orientation: portrait) {
+    .content{
+        flex-direction: column !important;
+        align-items: center !important;
+       
+        
+    }
+    img{
+        padding: 10px;
+    }
+    
+    footer{
+        margin-bottom: 10px;
+    }
+    body{
+        height: 100%;
+    }
+}
