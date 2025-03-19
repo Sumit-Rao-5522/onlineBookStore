@@ -14,16 +14,17 @@
         }
 
         body {
-            height: 100%;
             background: linear-gradient(50deg, rgb(236, 122, 122), rgb(224, 224, 90), pink, green);
             background-size: 400% 400%;
+            height: 100%;
             animation: moveBg 15s infinite linear;
-
-           
         }
        
+        .container-fluid{
+            padding: 0;
+            margin: 0;
+        }
 
-        /* Animation for moving background */
         @keyframes moveBg {
             0% { background-position: 0% 50%; }
             25% { background-position: 50% 100%; }
@@ -32,16 +33,11 @@
             100% { background-position: 0% 100%}
         }
 
-        .container-fluid{
-            padding: 0;
-            margin: 0;
-        }
-
-        @media screen and (orientation:landscape){
+            @media screen and (orientation:landscape){
             img{
-            height: 320px;
             width:220px;
-              }
+            height: 320px;
+            }
 
             footer{
             margin-top: 13%;
@@ -49,43 +45,38 @@
             }
         }
 
-       
-
-        
-
-
-        .image-container {
+       .image-holder {
+        width: 200px; 
+        height: 300px;
         position: relative;
-        width: 200px; /* Adjust as needed */
-        height: 300px; /* Adjust as needed */
-        perspective: 1000px; /* Adds 3D effect */
-    }
+        perspective: 1000px;
+        }
 
-    .image-wrapper {
+    .image-perametres {
         width: 100%;
         height: 100%;
         position: absolute;
-        transition: transform 1.5s ease-in-out;
+        transition: transform 1.3s ease-in-out;
         backface-visibility: hidden;
-    }
+        }
 
-    .front-image {
-        transform: rotateY(0deg);
-    }
-
-    .back-image {
-        transform: rotateY(180deg);
-    }
-
-    .image-container:hover .front-image {
-        transform: rotateY(180deg);
-        
-    }
-
-    .image-container:hover .back-image {
+    .image-holder:hover .book-front-image {
+        transform: rotateY(180deg);  
+        }
+    
+    .image-holder:hover .book-back-image {
         transform: rotateY(0deg);
         cursor: pointer;
-    }
+        }
+
+    .book-front-image {
+        transform: rotateY(0deg);
+        }
+
+    .book-back-image {
+        transform: rotateY(180deg);
+        }
+
     
         
     </style>
@@ -112,24 +103,24 @@
 
 
         <div class="d-flex flex-row justify-content-around mt-4 content">
-            <div class="image-container">
-                <img src="public/images/image1.jpg" class="image-wrapper front-image" alt="">
+            <div class="image-holder">
+                <img src="public/images/image1.jpg" class="image-perametres book-front-image" alt="">
                 <a href="book1.html">
-                    <img src="public/images/backimage.jpg" class="image-wrapper back-image" alt="">
+                    <img src="public/images/backimage.jpg" class="image-perametres book-back-image" alt="">
                 </a>
                 
             </div>
-            <div class="image-container">
-                <img src="public/images/image2.jpg" class="image-wrapper front-image" alt="">
+            <div class="image-holder">
+                <img src="public/images/image2.jpg" class="image-perametres book-front-image" alt="">
                 <a href="book2.html">
-                    <img src="public/images/backimage.jpg" class="image-wrapper back-image" alt="">
+                    <img src="public/images/backimage.jpg" class="image-perametres book-back-image" alt="">
                 </a>
                 
             </div>
-            <div class="image-container">
-                <img src="public/images/image3.jpg" class="image-wrapper front-image" alt="">
+            <div class="image-holder">
+                <img src="public/images/image3.jpg" class="image-perametres book-front-image" alt="">
                 <a href="book3.html">
-                    <img src="public/images/backimage.jpg" class="image-wrapper back-image" alt="">
+                    <img src="public/images/backimage.jpg" class="image-perametres book-back-image" alt="">
                 </a>
             </div>
         </div>
